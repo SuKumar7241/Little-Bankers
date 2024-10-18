@@ -1,34 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import Dashboard from './components/Dashboard'
+import Quiz from './components/Quiz'
+import SimulationGame from './components/SimulationGame'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('dashboard')
+  const [totalCoins, setTotalCoins] = useState(0)
+
+  const handleEarnCoins = (amount) => {
+    setTotalCoins(prevCoins => prevCoins + amount)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <Header setCurrentPage={setCurrentPage} totalCoins={totalCoins} />
+      <main>
+        {currentPage === 'dashboard' && <Dashboard setCurrentPage={setCurrentPage} />}
+        {currentPage === 'quiz' && <Quiz onComplete={handleEarnCoins} />}
+        {currentPage === 'simulation' && <SimulationGame onEarn={handleEarnCoins} />}
+      </main>
+    </div>
   )
 }
 
