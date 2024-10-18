@@ -1,16 +1,25 @@
-import React, { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-import Dashboard from './components/Dashboard'
-import Quiz from './components/Quiz'
-import SimulationGame from './components/SimulationGame'
+import React, { useState } from 'react';
+import './App.css';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import Quiz from './components/Quiz';
+import SimulationGame from './components/SimulationGame';
+import LoadingPage from './components/LoadingPage';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('dashboard')
-  const [totalCoins, setTotalCoins] = useState(0)
+  const [currentPage, setCurrentPage] = useState('loading');
+  const [totalCoins, setTotalCoins] = useState(0);
 
   const handleEarnCoins = (amount) => {
-    setTotalCoins(prevCoins => prevCoins + amount)
+    setTotalCoins(prevCoins => prevCoins + amount);
+  };
+
+  const handleLoadingComplete = () => {
+    setCurrentPage('dashboard');
+  };
+
+  if (currentPage === 'loading') {
+    return <LoadingPage onLoadingComplete={handleLoadingComplete} />;
   }
 
   return (
@@ -22,7 +31,7 @@ const App = () => {
         {currentPage === 'simulation' && <SimulationGame onEarn={handleEarnCoins} />}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
