@@ -199,7 +199,7 @@ const Quiz = ({ onComplete, onEarnCoins }) => {
 
           {/* Next button */}
           {waitingForNext && (
-            <button onClick={moveToNextQuestion} style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px' }}>
+            <button onClick={moveToNextQuestion} style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px' ,color:'white'}}>
               Next
             </button>
           )}
