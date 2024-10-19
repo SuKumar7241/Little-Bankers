@@ -6,7 +6,7 @@ const Header = ({ totalCoins }) => {
 
   return (
     <header>
-      <h1>KidsCash Academy</h1>
+      <h1>Little Bankers</h1>
       <nav>
         <button onClick={() => navigate('/dashboard')}>Home</button> {/* Navigate to Dashboard */}
         <button onClick={() => navigate('/quiz')}>Quiz</button>
