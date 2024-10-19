@@ -25,7 +25,7 @@ const Dashboard = () => {
             <p>Test your financial knowledge and earn rewards</p>
           </div>
           <div className="card-icon">
-            <span role="img" aria-label="quiz">❓</span>
+            <span role="img" aria-label="quiz">❓</span> {/* Question mark */}
           </div>
         </div>
         <div className="card5" onClick={handleSimulationRedirect}>
@@ -34,7 +34,7 @@ const Dashboard = () => {
             <p>Practice budgeting and investment strategies</p>
           </div>
           <div className="card-icon">
-            <span role="img" aria-label="money">🐖</span>
+            <span role="img" aria-label="money">🐷</span> {/* Pig face emoji */}
           </div>
         </div>
       </div>
