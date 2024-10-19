@@ -1,0 +1,119 @@
+.quiz {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+/* Quiz styles */
+.quiz h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #9C27B0;
+  }
+  
+  .quiz .question-section, .quiz .answer-section {
+    margin-bottom: 3rem;
+  }
+  
+  .quiz .question-count {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .quiz .question-text {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .quiz .answer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .quiz .answer-section button {
+    background-color: #9C27B0;
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+  }
+  
+  .quiz .answer-section button:hover {
+    background-color: #7B1FA2;
+    transform: scale(1.05);
+  }
+  
+  .quiz .score-section {
+    text-align: center;
+  }
+  
+  .quiz .score-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .quiz .score-section p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .timer-container {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .loading-bar1 {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    width: 80%; 
+    transition: width 1s linear;
+  }
+  
+  .timer-text {
+    position: relative;
+    margin-top: 20px; /* Increased space from loader */
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .feedback {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  
+  .question-section {
+    margin-bottom: 20px;
+  }
+  
+  .answer-section button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .answer-section button:hover {
+    background-color: #bbdefb;
+  }
+  
+  .score-section {
+    font-size: 18px;
+  }
+  
+  .score-section span {
+    display: block;
+    margin-top: 10px;
+    font-size: 2rem;
+  }

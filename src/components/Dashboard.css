@@ -1,165 +1,50 @@
 .dashboard {
-    background-color: #e1f5fe; /* Light blue background for the dashboard */
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  padding: 20px;
+  text-align: center;
 }
 
-.parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23ffeb3b" opacity="0.1"/></svg>'),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><rect width="60" height="60" x="10" y="10" fill="%23ff4081" opacity="0.1"/></svg>');
-    background-size: 100px 100px, 80px 80px;
-    animation: parallaxMove 30s infinite linear;
-    z-index: 0;
-}
-
-@keyframes parallaxMove {
-    0% { background-position: 0 0, 0 0; }
-    100% { background-position: 100px 100px, 80px 80px; }
-}
-
-.animated-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #0d47a1; /* Dark blue for the title */
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-    animation: bounce 1s infinite alternate; /* Add bounce effect */
-}
-
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #546e7a; /* Grey color for subtitle */
-    font-style: italic;
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 1.5s; /* Fade in effect for subtitle */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.canvas-container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
 }
 
 .dashboard-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-top: 3rem;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  justify-content: space-around;
 }
 
-/* Card Styles */
 .card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-    width: calc(50% - 1rem); /* Adjusted width to allow for gap */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-    position: relative;
+  position: relative;
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease;
 }
 
-/* New hover effect */
 .card:hover {
-    transform: translateY(-5px); /* Slightly lift the card */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
-    background-color: #ffecb3; /* Light yellow background on hover */
-    animation: pulse 0.5s; /* Pulse animation */
+  transform: scale(1.05);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.card h3 {
-    color: #d32f2f; /* Bright red for card title */
-    margin-top: 0;
-    font-size: 2rem; /* Increased font size */
-    margin-bottom: 0.5rem;
-}
-
-.card p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #7f8c8d; /* Darker grey for text */
+.card-content {
+  margin-bottom: 10px;
 }
 
 .card-icon {
-    font-size: 4rem;
-    margin-top: 1rem;
-    transition: transform 0.3s ease; /* Scale icon on hover */
+  font-size: 30px;
 }
 
-.card:hover .card-icon {
-    transform: scale(1.3); /* Scale icon larger on hover */
+.floating-item {
+  font-size: 24px;
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Remove floating items */
-.card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 193, 7, 0.2); /* Light yellow overlay */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Transition for overlay */
-}
-
-.card:hover::after {
-    opacity: 1; /* Show overlay on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .dashboard {
-        padding: 2rem;
-    }
-
-    .animated-title {
-        font-size: 2.5rem; /* Adjust title size for smaller screens */
-    }
-
-    .subtitle {
-        font-size: 1.2rem; /* Adjust subtitle size */
-    }
-
-    .dashboard-cards {
-        flex-direction: column; /* Stack cards vertically on small screens */
-        gap: 1.5rem; /* Reduce gap */
-    }
-
-    .card {
-        width: 100%; /* Full width cards on small screens */
-    }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }

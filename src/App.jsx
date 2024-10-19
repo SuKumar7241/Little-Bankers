@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import Quiz from './components/Quiz';
-import SimulationGame from './components/SimulationGame';
+import FinancialAcademyGame from './components/FinancialAcademyGame';
 import LoadingPage from './components/LoadingPage';
 
 const App = () => {
@@ -18,6 +18,10 @@ const App = () => {
     setCurrentPage('dashboard');
   };
 
+  const handleQuizComplete = (score) => {
+    setCurrentPage('dashboard'); 
+  };
+
   if (currentPage === 'loading') {
     return <LoadingPage onLoadingComplete={handleLoadingComplete} />;
   }
@@ -27,8 +31,8 @@ const App = () => {
       <Header setCurrentPage={setCurrentPage} totalCoins={totalCoins} />
       <main>
         {currentPage === 'dashboard' && <Dashboard setCurrentPage={setCurrentPage} />}
-        {currentPage === 'quiz' && <Quiz onComplete={handleEarnCoins} />}
-        {currentPage === 'simulation' && <SimulationGame onEarn={handleEarnCoins} />}
+        {currentPage === 'quiz' && <Quiz onComplete={handleQuizComplete} onEarnCoins={handleEarnCoins} />}
+        {currentPage === 'simulation' && <FinancialAcademyGame/>}
       </main>
     </div>
   );

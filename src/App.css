@@ -154,63 +154,6 @@ main {
   margin-top: 1rem;
 }
 
-/* Quiz styles */
-.quiz h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #9C27B0;
-}
-
-.quiz .question-section, .quiz .answer-section {
-  margin-bottom: 3rem;
-}
-
-.quiz .question-count {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.quiz .question-text {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.quiz .answer-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.quiz .answer-section button {
-  background-color: #9C27B0;
-  color: white;
-  border: none;
-  padding: 1.2rem;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s;
-}
-
-.quiz .answer-section button:hover {
-  background-color: #7B1FA2;
-  transform: scale(1.05);
-}
-
-.quiz .score-section {
-  text-align: center;
-}
-
-.quiz .score-section h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.quiz .score-section p {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 /* Simulation game styles */
 .simulation-game h2 {
   font-size: 2.5rem;

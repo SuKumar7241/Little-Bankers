@@ -38,8 +38,9 @@ const LoadingPage = ({ onLoadingComplete }) => {
           <div className="piggy-bank">🐷</div>
           <div className="calculator">🧮</div>
         </div>
-        <div className="loading-bar">
-          <div className="loading-progress" style={{ width: `${progress}%` }}></div>
+        <div className="loading-bar2">
+        <div className="loading-progress" style={{ width: `${progress}%` }}></div>
+
         </div>
         <p className="loading-text">Loading... {progress}%</p>
       </div>
