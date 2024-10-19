@@ -7,6 +7,7 @@ import Quiz from './components/Quiz';
 import FinancialAcademyGame from './components/FinancialAcademyGame';
 import StockMarketGame from './components/StockMarketGame'; // Import your StockMarketGame component
 import LoadingPage from './components/LoadingPage';
+import CurrencyMatch from './components/CurrencyMatch';
 
 const App = () => {
   const [totalCoins, setTotalCoins] = useState(0);
@@ -34,6 +35,7 @@ const App = () => {
             <Route path="/quiz" element={<Quiz onComplete={handleQuizComplete} onEarnCoins={handleEarnCoins} />} />
             <Route path="/simulation" element={<FinancialAcademyGame />} />
             <Route path="/stock-market-game" element={<StockMarketGame totalCoins={totalCoins}/>} /> {/* Add route for StockMarketGame */}
+            <Route path="/currency-match-game" element={<CurrencyMatch/>} />
           </Routes>
         </main>
       </div>

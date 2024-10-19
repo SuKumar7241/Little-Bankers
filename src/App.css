@@ -100,60 +100,6 @@ main {
   margin: 0 auto;
 }
 
-/* Dashboard styles */
-.dashboard h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #2196F3;
-}
-
-.dashboard p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.dashboard-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-.card {
-  background-color: #E8F5E9;
-  padding: 2rem;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: all 0.3s;
-  width: calc(50% - 1.5rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-.card h3 {
-  color: #2196F3;
-  margin-top: 0;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.card p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.card span {
-  font-size: 4rem;
-  margin-top: 1rem;
-}
-
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .app {

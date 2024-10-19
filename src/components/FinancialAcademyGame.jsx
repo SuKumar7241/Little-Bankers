@@ -75,7 +75,7 @@ const FinancialAcademyGame = () => {
       {/* Modal for Selected Game */}
       {selectedGame && (
         <div className="game-modal">
-          <div className="modal-content">
+          <div className="modal-content1">
             <h3>{selectedGame.title}</h3>
             <p>{selectedGame.description}</p>
             <button onClick={selectedGame.action}>Start Game</button>

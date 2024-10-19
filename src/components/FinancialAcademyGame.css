@@ -86,7 +86,7 @@ h2 {
   justify-content: center;
 }
 
-.modal-content {
+.modal-content1 {
   background-color: white;
   padding: 30px;
   border-radius: 10px;
@@ -94,19 +94,19 @@ h2 {
   width: 400px;
 }
 
-.modal-content h3 {
+.modal-content1 h3 {
   color: #2196f3;
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
-.modal-content p {
+.modal-content1 p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
 /* Modal Buttons */
-.modal-content button {
+.modal-content1 button {
   padding: 10px 20px;
   margin: 10px;
   background-color: #2196f3;
@@ -117,7 +117,7 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
-.modal-content button:hover {
+.modal-content1 button:hover {
   background-color: #1769aa;
 }
 
