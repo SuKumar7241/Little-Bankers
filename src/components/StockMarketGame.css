@@ -1,136 +1,158 @@
 .game-container {
-    max-width: 64rem;
-    margin: 0 auto;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .game-title {
-    font-size: 1.5rem;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    color: #ed8936;
-  }
-  
-  .game-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .day, .piggy-bank, .net-worth {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .net-worth {
-    font-weight: bold;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+  max-width: 64rem;
+  margin: 0 auto;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.game-title {
+  font-size: 1.5rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: #ed8936;
+}
+
+.game-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.day, .piggy-bank, .net-worth {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.net-worth {
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.money-gif, .stock-gif, .money-growth-gif {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  width: 100%;
+}
+
+.tip-box {
+  background-color: #fefcbf;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  animation: bounce 1s infinite;
+}
+
+.tip-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.stock-table-container {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.stock-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.stock-table th {
+  text-align: left;
+  padding: 0.5rem;
+  background-color: #ed8936; /* Header background color */
+  color: white; /* Header text color */
+}
+
+.stock-table td {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for effects */
+}
+
+.stock-table tr {
+  border-radius: 0.5rem;
+}
+
+.stock-table tr:hover {
+  background-color: #f0e68c; /* Highlight on hover */
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.stock-table tr:nth-child(even) td {
+  background-color: #e6f7ff; /* Light blue for even rows */
+}
+
+.stock-table tr:nth-child(odd) td {
+  background-color: #fff3cd; /* Light yellow for odd rows */
+}
+
+.stock-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  animation: bounce 1s infinite;
+  display: inline-block;
+}
+
+.buy-button, .sell-button {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-button {
+  background-color: #48bb78;
+  margin-right: 0.5rem;
+}
+
+.sell-button {
+  background-color: #f56565;
+}
+
+.buy-button:hover, .sell-button:hover {
+  transform: scale(1.05);
+}
+
+.buy-button:disabled, .sell-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gif-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .stock-table th, .stock-table td {
+    padding: 0.75rem; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Smaller text for mobile */
   }
-  
-  .money-gif, .stock-gif, .money-growth-gif {
-    width: 100%;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .chart-container {
-    width: 100%;
-  }
-  
-  .tip-box {
-    background-color: #fefcbf;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    animation: bounce 1s infinite;
-  }
-  
-  .tip-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .stock-table-container {
-    overflow-x: auto;
-    margin-bottom: 1rem;
-  }
-  
-  .stock-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 0.5rem;
-  }
-  
-  .stock-table th {
-    text-align: left;
-    padding: 0.5rem;
-  }
-  
-  .stock-table td {
-    padding: 1rem;
-    background-color: #f0f0f0;
-  }
-  
-  .stock-table tr {
-    border-radius: 0.5rem;
-  }
-  
-  .stock-icon {
-    font-size: 2rem;
-    margin-right: 0.5rem;
-    animation: bounce 1s infinite;
-    display: inline-block;
-  }
-  
-  .buy-button, .sell-button {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .buy-button {
-    background-color: #48bb78;
-    margin-right: 0.5rem;
-  }
-  
-  .sell-button {
-    background-color: #f56565;
-  }
-  
-  .buy-button:hover, .sell-button:hover {
-    transform: scale(1.05);
-  }
-  
-  .buy-button:disabled, .sell-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  .gif-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  
-  @keyframes bounce {
-    0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
-    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
-  }
-  
-  .icon {
-    margin-right: 0.5rem;
-  }
+}
