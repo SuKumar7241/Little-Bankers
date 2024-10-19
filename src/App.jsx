@@ -9,6 +9,7 @@ import StockMarketGame from './components/StockMarketGame';
 import LoadingPage from './components/LoadingPage';
 import CurrencyMatch from './components/CurrencyMatch';
 import MoneyManagementGame from './components/MoneyManagementGame';
+import LoginPage from './components/LoginPage';
 
 const App = () => {
   const [totalCoins, setTotalCoins] = useState(0);
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/stock-market-game" element={<StockMarketGame totalCoins={totalCoins} />} />
             <Route path="/currency-match-game" element={<CurrencyMatch />} />
             <Route path="/money-management" element={<MoneyManagementGame totalCoins={totalCoins}/>} />
+            <Route path="/login-page" element={<LoginPage/>} />
           </Routes>
         </main>
       </div>
