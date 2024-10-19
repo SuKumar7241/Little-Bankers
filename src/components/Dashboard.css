@@ -36,8 +36,8 @@
 }
 
 .card5:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
-    background: #ffd54f; /* Lighter yellow on hover */
+    transform: scale(1.05); 
+    background: #ffd54f; 
 }
 
 .card-icon {
@@ -47,7 +47,7 @@
 
 .card-content {
     font-size: large;
-    flex-grow: 1; /* Allow content to grow */
+    flex-grow: 1;
 }
 
 .card-content h3 {

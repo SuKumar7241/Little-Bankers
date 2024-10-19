@@ -23,7 +23,7 @@ const FinancialAcademyGame = () => {
       id: 'saving',
       title: 'Guess Me',
       description: 'Guess Different Finance Related Image and earn coins',
-      image: 'https://via.placeholder.com/300x200.png?text=Saving+Image',
+      image: 'https://firebasestorage.googleapis.com/v0/b/image-upload-ac665.appspot.com/o/images%2FWhatsApp%20Image%202024-10-19%20at%2014.19.05_317ae2ab.jpgb2d0d6db-64fe-4e6c-b8ff-44cf2f0a3ec2?alt=media&token=1568f36d-2683-4cc8-99ee-2537cf4b9d29',
     },
   ];
 

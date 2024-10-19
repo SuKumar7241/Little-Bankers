@@ -42,9 +42,9 @@ const App = () => {
             <Route path="/simulation" element={<FinancialAcademyGame />} />
             <Route path="/stock-market-game" element={<StockMarketGame totalCoins={totalCoins} />} />
             <Route path="/currency-match-game" element={<CurrencyMatch />} />
+
             <Route path="/money-management" element={<MoneyManagementGame totalCoins={totalCoins} onEarnCoins={handleEarnCoins} />} />
             </Routes>
-        </main>
       </div>
     </Router>
   );
