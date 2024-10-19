@@ -1,19 +1,22 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const Header = ({ setCurrentPage, totalCoins }) => {
+const Header = ({ totalCoins }) => {
+  const navigate = useNavigate(); // Initialize navigate function
+
   return (
     <header>
       <h1>KidsCash Academy</h1>
       <nav>
-        <button onClick={() => setCurrentPage('dashboard')}>Home</button>
-        <button onClick={() => setCurrentPage('quiz')}>Quiz</button>
-        <button onClick={() => setCurrentPage('simulation')}>Money Game</button>
+        <button onClick={() => navigate('/dashboard')}>Home</button> {/* Navigate to Dashboard */}
+        <button onClick={() => navigate('/quiz')}>Quiz</button>
+        <button onClick={() => navigate('/simulation')}>Money Game</button>
       </nav>
       <div className="coin-counter">
         <span role="img" aria-label="coin">🪙</span> {totalCoins}
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
