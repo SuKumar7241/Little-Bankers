@@ -9,21 +9,17 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBBEfxFjGjsom7EsHWpMFv3GAORwH56G-M",
-  authDomain: "expense-tracker-87e7e.firebaseapp.com",
-  projectId: "expense-tracker-87e7e",
-  storageBucket: "expense-tracker-87e7e.appspot.com",
-  messagingSenderId: "754484285739",
-  appId: "1:754484285739:web:d7b45f6b0443d3a305b56e",
-  measurementId: "G-05TBRF2KGN"
+  apiKey: "AIzaSyAJ1JEr_cLnWWLS_W1yts62Sxofqs4ajEk",
+  authDomain: "little-bankers.firebaseapp.com",
+  projectId: "little-bankers",
+  storageBucket: "little-bankers.appspot.com",
+  messagingSenderId: "4798650922",
+  appId: "1:4798650922:web:cd8f200d6e57aa61e40153"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 export const auth=getAuth(app);
-export const provider = new GoogleAuthProvider();
-export const db = getFirestore(app);
 //firebase login 
 //firebase init 
 //firebase deploy

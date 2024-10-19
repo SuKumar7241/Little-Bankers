@@ -13,17 +13,57 @@ const Quiz = ({ onComplete, onEarnCoins }) => {
 
   const questions = [
     {
-      question: "What is the purpose of a budget?",
-      options: ["To spend more money", "To plan how to use your money", "To earn extra money", "To save receipts"],
+      question: "What is the money you save for future use called?",
+      options: ["Investment", "Spending", "Savings", "Debt"],
+      correctAnswer: 2,
+    },
+    {
+      question: "What is the name for a plan that helps you decide how to spend your money?",
+      options: ["Shopping list", "Schedule", "Budget", "Savings account"],
+      correctAnswer: 2,
+    },
+    {
+      question: "What should you do if you want to save more money?",
+      options: ["Spend it quickly", "Keep it in a piggy bank", "Borrow more", "Give it away"],
       correctAnswer: 1,
     },
     {
-      question: "Which of these is considered a need?",
-      options: ["Video games", "Food", "Toys", "Concert tickets"],
+      question: "Which of these is a good way to track your spending?",
+      options: ["Guessing", "Writing it down", "Not caring", "Asking a friend"],
       correctAnswer: 1,
     },
-    // ... Add remaining questions here ...
+    {
+      question: "If you lend money to a friend, what is that called?",
+      options: ["Earning", "Saving", "Lending", "Investing"],
+      correctAnswer: 2,
+    },
+    {
+      question: "What do you call the money you owe someone?",
+      options: ["Debt", "Income", "Savings", "Bonus"],
+      correctAnswer: 0,
+    },
+    {
+      question: "Why is it important to save money?",
+      options: ["To buy expensive things", "For emergencies", "To spend later", "To impress friends"],
+      correctAnswer: 1,
+    },
+    {
+      question: "Which of these is a safe place to keep your savings?",
+      options: ["In a wallet", "In a bank", "Under your bed", "With a friend"],
+      correctAnswer: 1,
+    },
+    {
+      question: "What is the best way to avoid running out of money?",
+      options: ["Spend less than you earn", "Borrow often", "Spend everything", "Save nothing"],
+      correctAnswer: 0,
+    },
+    {
+      question: "What happens when you spend more money than you have?",
+      options: ["You save", "You go into debt", "You get richer", "You have more money"],
+      correctAnswer: 1,
+    },
   ];
+  
 
   useEffect(() => {
     if (timeLeft > 0 && !showScore && !waitingForNext) {

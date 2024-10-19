@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, AlertCircle } from 'lucide-react';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
 
 const LoginPage = () => {
@@ -10,10 +12,15 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
 
+  const navigate = useNavigate(); // Hook to navigate to another route
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
 
+    const auth = getAuth();
+
+    // Validate form
     if (!username || !password || (!isLogin && !email)) {
       setError('Please fill in all fields.');
       return;
@@ -29,8 +36,24 @@ const LoginPage = () => {
       return;
     }
 
-    console.log(isLogin ? 'Login' : 'Registration', 'submitted:', { username, password, email });
-    // Here you would typically make an API call to handle login/registration
+    // Login or Registration logic
+    if (isLogin) {
+      // Login with Firebase Auth
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          console.log('Login successful!');
+          navigate('/dashboard'); // Redirect to dashboard on success
+        })
+        .catch((err) => setError(err.message));
+    } else {
+      // Register with Firebase Auth
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          console.log('Registration successful!');
+          navigate('/dashboard'); // Redirect to dashboard on success
+        })
+        .catch((err) => setError(err.message));
+    }
   };
 
   const toggleMode = () => {
@@ -41,7 +64,7 @@ const LoginPage = () => {
   return (
     <div className="login-container">
       <div className="gradient-bar"></div>
-      <h1 className="title">KidsCash Academy</h1>
+      <h1 className="title">Little Bankers</h1>
       <div className="logo-container">
         <svg className="logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 5C12 3.34315 10.6569 2 9 2H3C2.44772 2 2 2.44772 2 3V9C2 10.6569 3.34315 12 5 12H9C10.6569 12 12 10.6569 12 9V5Z" fill="#FCD34D"/>
