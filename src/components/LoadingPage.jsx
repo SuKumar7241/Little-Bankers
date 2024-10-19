@@ -29,7 +29,7 @@ const LoadingPage = ({ onLoadingComplete }) => {
         <div className="circle circle2"></div>
         <div className="circle circle3"></div>
       </div>
-      <div className="content">
+      <div className="content4">
         <h1 className="title">KidsCash Academy</h1>
         <div className="icons">
           <div className="coin coin1">💰</div>

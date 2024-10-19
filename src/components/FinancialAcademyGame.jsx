@@ -12,14 +12,12 @@ const FinancialAcademyGame = () => {
       title: 'Earn Money (Chores)',
       description: 'Earn money by doing household chores.',
       image: 'https://via.placeholder.com/300x200.png?text=Chores+Image',
-      action: () => alert('Do Chores: Earn $5!'),
     },
     {
       id: 'spending',
       title: 'Spend Money (Candy)',
       description: 'Buy some candy for $2.',
       image: 'https://via.placeholder.com/300x200.png?text=Spending+Image',
-      action: () => alert('Buy Candy: Spend $2!'),
     },
     {
       id: 'saving',
@@ -28,24 +26,11 @@ const FinancialAcademyGame = () => {
       image: 'https://via.placeholder.com/300x200.png?text=Saving+Image',
       action: () => alert('Save Money: Earn interest on $5!'),
     },
-    {
-      id: 'investing',
-      title: 'Invest Money',
-      description: 'Invest $10 and watch your money grow!',
-      image: 'https://via.placeholder.com/300x200.png?text=Investing+Image',
-      action: () => alert('Invest Money: Grow 20% every 30 days!'),
-    },
-    {
-      id: 'allowance',
-      title: 'Daily Allowance',
-      description: 'Receive your daily allowance of $1.',
-      image: 'https://via.placeholder.com/300x200.png?text=Allowance+Image',
-      action: () => alert('Next Day: You received $1 allowance!'),
-    },
   ];
 
   // Update the action for the first game to navigate to StockMarketGame
   games[0].action = () => navigate('/stock-market-game'); // Navigate to Stock Market Game
+  games[1].action = () => navigate('/currency-match-game');
 
   const openGame = (game) => {
     setSelectedGame(game);
@@ -64,7 +49,7 @@ const FinancialAcademyGame = () => {
         {games.map((game) => (
           <div key={game.id} className="game-card" onClick={() => openGame(game)}>
             <img src={game.image} alt={game.title} className="game-image" />
-            <div className="game-info">
+            <div className="game-info1">
               <h3>{game.title}</h3>
               <p>{game.description}</p>
             </div>

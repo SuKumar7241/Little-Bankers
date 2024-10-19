@@ -50,19 +50,19 @@ h2 {
   border-radius: 10px;
 }
 
-.game-info {
+.game-info1 {
   margin-top: 10px;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center align items */
 }
 
-.game-info h3 {
+.game-info1 h3 {
   color: #2196f3;
   font-size: 1.5rem;
 }
 
-.game-info p {
+.game-info1 p {
   color: #333;
   font-size: 1rem;
 }
