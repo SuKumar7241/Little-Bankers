@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  color: #333;
-  background-color: #F0F8FF;
-}
 
 #root {
   height: 100%;
@@ -34,6 +27,7 @@ header {
   border-radius: 10px;
   margin-bottom: 2rem;
   display: flex;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;

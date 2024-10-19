@@ -14,6 +14,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: url("assets/2.jpg"); /* Your background image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 300px; /* Set a height for the background section */
+    position: relative; /* Enable absolute positioning for content */
+    z-index: -1; /* Send background behind content */
 }
 
 h1 {
@@ -31,6 +38,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  
 }
 button:hover {
   border-color: #646cff;
