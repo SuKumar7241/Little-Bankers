@@ -6,11 +6,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   padding: 20px;
 }
 
 .financial-academy-container {
   padding: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */

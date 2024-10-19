@@ -14,7 +14,7 @@ const Dashboard = ({ setCurrentPage }) => {
             <p>Test your financial knowledge and earn rewards</p>
           </div>
           <div className="card-icon">
-            <span role="img" aria-label="quiz">❓</span> {/* Changed to question mark */}
+            <span role="img" aria-label="quiz">❓</span> {/* Question mark */}
           </div>
         </div>
         <div className="card5" onClick={() => setCurrentPage('simulation')}>
@@ -23,7 +23,7 @@ const Dashboard = ({ setCurrentPage }) => {
             <p>Practice budgeting and investment strategies</p>
           </div>
           <div className="card-icon">
-            <span role="img" aria-label="money">🐖</span> {/* Changed to pig emoji */}
+            <span role="img" aria-label="money">🐷</span> {/* Pig face emoji */}
           </div>
         </div>
       </div>

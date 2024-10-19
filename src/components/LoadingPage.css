@@ -3,6 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   padding: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -14,6 +15,7 @@
     height: 100%;
     background-color: #f0f8ff;
     display: flex;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     justify-content: center;
     align-items: center;
     overflow: hidden;
