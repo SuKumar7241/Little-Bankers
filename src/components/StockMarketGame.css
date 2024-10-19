@@ -1,6 +1,7 @@
 .game-container {
     max-width: 64rem;
     margin: 0 auto;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     background-color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -9,6 +10,7 @@
   
   .game-title {
     font-size: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     font-weight: bold;
     margin-bottom: 1rem;
     display: flex;
@@ -30,6 +32,8 @@
   
   .net-worth {
     font-weight: bold;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+
   }
   
   .money-gif, .stock-gif, .money-growth-gif {
