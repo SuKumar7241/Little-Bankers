@@ -1,59 +1,80 @@
 .game-container {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-  
-  .game-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    color: #2563eb;
-    display: flex;
-    align-items: center;
-  }
-  
-  .game-icon {
-    margin-right: 0.5rem;
-  }
-  
-  .question-counter {
-    margin-bottom: 1rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-  
-  .score-card {
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .score-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .score-text {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  .restart-button {
-    background-color: #2563eb;
-    color: white;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s;
-  }
-  
-  .restart-button:hover {
-    background-color: #1d4ed8;
-  }
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.game-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+}
+
+.game-icon {
+  margin-right: 0.5rem;
+}
+
+.question-counter {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.score-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: center;
+}
+
+.score-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.score-text {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.restart-button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.restart-button:hover {
+  background-color: #1d4ed8;
+}
+
+.answer-feedback {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 1rem; /* Optional: Add some space above */
+}
+
+.next-button {
+  background-color: #e6f7ff; /* Set background color */
+  color: #000; /* Optional: Set text color */
+  border: none; /* Optional: Remove border */
+  padding: 10px 20px; /* Optional: Add padding */
+  cursor: pointer; /* Optional: Change cursor on hover */
+  border-radius: 5px; /* Optional: Add border radius */
+  margin-top: 0.5rem; /* Optional: Space above the button */
+}
+
+.next-button:hover {
+  background-color: #cceeff; /* Optional: Darker shade on hover */
+}

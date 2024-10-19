@@ -43,10 +43,16 @@ const App = () => {
             <Route path="/simulation" element={<FinancialAcademyGame />} />
             <Route path="/stock-market-game" element={<StockMarketGame totalCoins={totalCoins} />} />
             <Route path="/currency-match-game" element={<CurrencyMatch />} />
+<<<<<<< HEAD
             <Route path="/money-management" element={<MoneyManagementGame totalCoins={totalCoins}/>} />
             <Route path="/login-page" element={<LoginPage/>} />
           </Routes>
         </main>
+=======
+
+            <Route path="/money-management" element={<MoneyManagementGame totalCoins={totalCoins} onEarnCoins={handleEarnCoins} />} />
+            </Routes>
+>>>>>>> 737a559386c1435db77f2f92667aa4bea397684d
       </div>
     </Router>
   );

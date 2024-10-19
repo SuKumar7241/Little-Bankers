@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, TrendingDown, DollarSign, BarChart2 } from 'lucide-react';
+import { TrendingUp, DollarSign, BarChart2 } from 'lucide-react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import confetti from 'canvas-confetti';
@@ -14,11 +14,11 @@ const initialStocks = [
   { name: 'Pet Paradise', price: 20, shares: 0, history: [20], icon: '🐶' },
 ];
 
-const StockMarketGame = ({ totalCoins }) => { // Accept totalCoins as a prop
+const StockMarketGame = ({ totalCoins }) => {
   const [stocks, setStocks] = useState(initialStocks);
-  const [piggyBank, setPiggyBank] = useState(totalCoins); // Initialize with totalCoins prop
+  const [piggyBank, setPiggyBank] = useState(totalCoins);
   const [day, setDay] = useState(1);
-  const [netWorthHistory, setNetWorthHistory] = useState([totalCoins]); // Initialize with totalCoins
+  const [netWorthHistory, setNetWorthHistory] = useState([totalCoins]);
   const [showTip, setShowTip] = useState(false);
   const [tipIndex, setTipIndex] = useState(0);
 
@@ -97,19 +97,6 @@ const StockMarketGame = ({ totalCoins }) => { // Accept totalCoins as a prop
     return Number((piggyBank + stocks.reduce((total, stock) => total + stock.price * stock.shares, 0)).toFixed(2));
   };
 
-  const netWorthChartData = {
-    labels: netWorthHistory.map((_, index) => `Day ${index + 1}`), // Use backticks for template literals
-    datasets: [
-      {
-        label: 'Piggy Bank Value',
-        data: netWorthHistory,
-        fill: false,
-        borderColor: 'rgb(255, 99, 132)',
-        tension: 0.1
-      }
-    ]
-  };
-
   return (
     <div className="game-container">
       <h2 className="game-title">
@@ -119,15 +106,12 @@ const StockMarketGame = ({ totalCoins }) => { // Accept totalCoins as a prop
         <div>
           <p className="day">Day: {day}</p>
           <p className="piggy-bank1">
-            <DollarSign className="icon" /> Piggy Bank: ${piggyBank.toFixed(2)}
+            <DollarSign className="icon" /> Piggy Bank: {piggyBank.toFixed(2)}
           </p>
           <p className="net-worth">
-            <TrendingUp className="icon" /> Total Value: ${calculateNetWorth().toFixed(2)}
+            <TrendingUp className="icon" /> Total Value: {calculateNetWorth().toFixed(2)}
           </p>
           <img src="https://media.giphy.com/media/67ThRZlYBvibtdF9JH/giphy.gif" alt="Money gif" className="money-gif" />
-        </div>
-        <div className="chart-container">
-          <Line data={netWorthChartData} />
         </div>
       </div>
       {showTip && (
@@ -141,7 +125,7 @@ const StockMarketGame = ({ totalCoins }) => { // Accept totalCoins as a prop
           <thead>
             <tr>
               <th>Company</th>
-              <th>Price</th>
+              <th>Coin</th>
               <th>Shares</th>
               <th>Actions</th>
               <th>Trend</th>
@@ -154,7 +138,7 @@ const StockMarketGame = ({ totalCoins }) => { // Accept totalCoins as a prop
                   <span className="stock-icon">{stock.icon}</span>
                   {stock.name}
                 </td>
-                <td>${stock.price.toFixed(2)}</td>
+                <td>{stock.price.toFixed(2)}</td>
                 <td>{stock.shares}</td>
                 <td>
                   <button
